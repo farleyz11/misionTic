@@ -25,7 +25,7 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
             return rutas;
         }
  
-        public Rutas GetRutasWithId(int id){
+        public Rutas GetRutaWithId(int id){
             return rutas.SingleOrDefault(b => b.id == id);
         }
     }

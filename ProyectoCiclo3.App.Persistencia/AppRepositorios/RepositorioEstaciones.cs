@@ -25,7 +25,7 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
             return estaciones;
         }
  
-        public Estaciones GetEstacionesWithId(int id){
+        public Estaciones GetEstacionWithId(int id){
             return estaciones.SingleOrDefault(b => b.id == id);
         }
     }
