@@ -13,9 +13,9 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         {
             estaciones= new List<Estaciones>()
             {
-                new Estaciones{id=1,nombre="Americas - Av Boyaca",direccion="xxxxx",coord_x= 456,coord_y= 207,tipo="Expresos"},
-                new Estaciones{id=2,nombre="Ciudad Universitaria",direccion="xxxxx",coord_x= 567,coord_y= 234,tipo="Expresos"},
-                new Estaciones{id=3,nombre="Museo Nacional",direccion="xxxx",coord_x= 123,coord_y= 456,tipo="Ruta Facil"}
+                new Estaciones{id=1,nombre="Americas - Av Boyaca",direccion="Carrera 53",coord_x= 456,coord_y= 207,tipo="Expresos"},
+                new Estaciones{id=2,nombre="Ciudad Universitaria",direccion="Ac. 26 # 33A",coord_x= 567,coord_y= 234,tipo="Expresos"},
+                new Estaciones{id=3,nombre="Museo Nacional",direccion="Carrera 7",coord_x= 123,coord_y= 456,tipo="Ruta Facil"}
  
             };
         }

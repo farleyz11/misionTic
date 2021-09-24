@@ -1,34 +1,28 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.ListRutaModel
 @{
 }
  
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Origen</th>
-      <th scope="col">Destino</th>
-      <th scope="col">Tiempo Estimado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Av Boyaca</td>
-      <td>Ciudad Universitaria</td>
-      <td>60</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Museo Nacional</td>
-      <td>Av Boyaca</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Ciudad Universitaria</td>
-      <td>Museo Nacional</td>
-      <td>75</td>
-    </tr>
-  </tbody>
+<h1>Listado de Rutas</h1>
+<table class="table">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Origen</th>
+            <th scope="col">Destino</th>
+            <th scope="col">Tiempo Estimado</th>
+        </tr>
+    @foreach (var ruta in Model.Rutas)
+    {
+        <tr>
+            <td>@ruta.id</td>
+            <td>@ruta.origen</td>
+            <td>@ruta.destino</td>
+            <td>@ruta.tiempo_estimado</td>
+            <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-rutaId="@ruta.id"><i class="fas fa-adjust"></i>Ver</a>
+              <a class="btn btn-info" href="">Editar</a>
+              <a class="btn btn-danger" href="">Eliminar</a>
+              </td>
+        </tr>
+    }
 </table>
