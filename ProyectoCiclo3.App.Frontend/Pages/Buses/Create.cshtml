@@ -1,22 +1,23 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.FormBusModel
 @{
 }
  
 <div class="text-center">
-<form action="">
-  <label for="ID" class="form-label">Digite el ID:</label>
-  <input type="number" class="form-control" id="ID" name="ID" placeholder="ID">
-  <label for="Marca" class="form-label">Digite la Marca:</label>
-  <input type="text" class="form-control" id="Marca" name="Marca" placeholder="Marca">
-  <label for="Modelo" class="form-label">Digite el Modelo:</label>
-  <input type="number" class="form-control" id="Modelo" name="Modelo" placeholder="Modelo">
-  <label for="Numero de Asientos" class="form-label">Digite el # de Asientos:</label>
-  <input type="number" class="form-control" id="Numero de Asientos" name="Numero de Asientos" placeholder="Numero de Asientos">
-  <label for="Kilometraje" class="form-label">Digite el Kilometraje:</label>
-  <input type="number" class="form-control" id="Kilometraje" name="Kilometraje" placeholder="Kilometraje">
-  <label for="Placa" class="form-label">Digite la Placa:</label>
-  <input type="text" class="form-control" id="Placa" name="Placa" placeholder="Placa">
+<form method="POST">
+  <label for="id" class="form-label">id:</label>
+  <input type="number" class="form-control" id="id" name="id" placeholder="id">
+  <label for="Marca" class="form-label">Marca:</label>
+  <input type="text" class="form-control" id="marca" name="marca" placeholder="Marca">
+  <label for="Modelo" class="form-label">Modelo:</label>
+  <input type="number" class="form-control" id="modelo" name="modelo" placeholder="Modelo">
+  <label for="Kilometraje" class="form-label">Kilometraje:</label>
+  <input type="number" class="form-control" id="kilometraje" name="kilometraje" placeholder="Kilometraje">
+  <label for="Número de asientos" class="form-label">Número de asientos:</label>
+  <input type="number" class="form-control" id="numero_asientos" name="numero_asientos" placeholder="Número de asientos">
+  <label for="Placa" class="form-label">Placa:</label>
+  <input type="text" class="form-control" id="placa" name="placa" placeholder="Placa">
   <hr>
-  <button type="submit" class="btn btn-success">Enviar</button>
+<button type="submit" class="btn btn-success">Enviar</button>
 </form>
 </div>
