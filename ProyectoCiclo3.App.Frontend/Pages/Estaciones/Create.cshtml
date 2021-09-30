@@ -1,19 +1,22 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.FormEstacionModel
 @{
 }
  
 <div class="text-center">
-<form action="">
-  <label for="ID" class="form-label">Digite el ID de la Estacion:</label>
-  <input type="number" class="form-control" id="ID" name="ID" placeholder="ID">
-  <label for="Nombre de la estacion" class="form-label">Digite el Nombre de la estacion:</label>
-  <input type="text" class="form-control" id="Nombre de la estacion" name="Nombre de la estacion" placeholder="Nombre de la estacion">
-  <label for="Coordenada X" class="form-label">Digite la Coordenada X:</label>
-  <input type="number" class="form-control" id="Coordenada X" name="Coordenada X" placeholder="Coordenada X">
-  <label for="Coordenada Y" class="form-label">Digite la Coordenada Y:</label>
-  <input type="number" class="form-control" id="Coordenada Y" name="Coordenada Y" placeholder="Coordenada Y">
-  <label for="Tipo" class="form-label">Digite el Tipo de Ruta:</label>
-  <input type="text" class="form-control" id="Tipo" name="Tipo de" placeholder="Tipo">
+<form method="POST">
+  <label for="id" class="form-label">id:</label>
+  <input type="number" class="form-control" id="id" name="id" placeholder="id">
+  <label for="Nombre" class="form-label">Nombre de la Estacion:</label>
+  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+  <label for="Direccion" class="form-label">Direccion de la Estacion:</label>
+  <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion">
+  <label for="Coord_x" class="form-label">Coordenada X:</label>
+  <input type="number" class="form-control" id="coord_x" name="coord_x" placeholder="Coord_x">
+  <label for="Coord_y" class="form-label">Coordenada Y:</label>
+  <input type="number" class="form-control" id="coord_y" name="coord_y" placeholder="Coord_y">
+  <label for="Tipo" class="form-label">Tipo de Estacion:</label>
+  <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo">
   <hr>
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>

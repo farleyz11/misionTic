@@ -9,33 +9,36 @@ using ProyectoCiclo3.App.Dominio;
  
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
-    public class FormEstacionModel : PageModel
+    public class EditRutaModel : PageModel
     {
- 
-        private readonly RepositorioEstaciones repositorioEstaciones;
+        private readonly RepositorioRutas repositorioRutas;
         [BindProperty]
-        public Estaciones Estacion {get;set;}
+        public Rutas Ruta {get;set;}
  
-        public FormEstacionModel(RepositorioEstaciones repositorioEstaciones)
+        public EditRutaModel(RepositorioRutas repositorioRutas)
        {
-            this.repositorioEstaciones=repositorioEstaciones;
+            this.repositorioRutas=repositorioRutas;
        }
  
-        public void OnGet()
+        public IActionResult OnGet(int rutaId)
         {
+                Ruta=repositorioRutas.GetRutaWithId(rutaId);
+                return Page();
  
         }
- 
+
         public IActionResult OnPost()
         {
             if(!ModelState.IsValid)
             {
                 return Page();
-            }            
-            Estacion = repositorioEstaciones.Create(Estacion);            
+            }
+            if(Ruta.id>0)
+            {
+            Ruta = repositorioRutas.Update(Ruta);
+            }
             return RedirectToPage("./List");
         }
+
     }
 }
-
-
