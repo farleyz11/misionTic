@@ -6,17 +6,17 @@
 <div class="text-center">
 <form method="POST">
   @* <label for="id" class="form-label">id:</label> r
-  <input type="number" class="form-control" id="id" name="id" placeholder="id"> *@
+  <input type="number" class="form-control" id="id" asp-for="Estacion.id" placeholder="id"> *@
   <label for="Nombre" class="form-label">Nombre de la Estacion:</label>
-  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+  <input type="text" class="form-control" id="nombre" asp-for="Estacion.nombre" placeholder="Nombre">
   <label for="Direccion" class="form-label">Direccion de la Estacion:</label>
-  <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion">
+  <input type="text" class="form-control" id="direccion" asp-for="Estacion.direccion" placeholder="Direccion">
   <label for="Coord_x" class="form-label">Coordenada X:</label>
-  <input type="number" class="form-control" id="coord_x" name="coord_x" placeholder="Coord_x">
+  <input type="number" class="form-control" id="coord_x" asp-for="Estacion.coord_x" placeholder="Coord_x">
   <label for="Coord_y" class="form-label">Coordenada Y:</label>
-  <input type="number" class="form-control" id="coord_y" name="coord_y" placeholder="Coord_y">
+  <input type="number" class="form-control" id="coord_y" asp-for="Estacion.coord_y" placeholder="Coord_y">
   <label for="Tipo" class="form-label">Tipo de Estacion:</label>
-  <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo">
+  <input type="text" class="form-control" id="tipo" asp-for="Estacion.tipo" placeholder="Tipo">
   <hr>
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>

@@ -6,13 +6,25 @@
 <div class="text-center">
 <form method="POST">
   @* <label for="ID" class="form-label">Digite el ID de la Ruta:</label>
-  <input type="number" class="form-control" id="ID" name="ID" placeholder="ID"> *@
+  <input type="number" class="form-control" id="ID" asp-for="Ruta.ID" placeholder="ID"> *@
   <label for="Origen" class="form-label">Digite el Origen de la Ruta:</label>
-  <input type="number" class="form-control" id="Origen" name="Origen" placeholder="Origen">
+  <select asp-for="Ruta.origen" class="form-control" required>
+        <option value="">Selecciona el origen</option>
+        @foreach (var estacion in Model.Estaciones)
+    {
+        <option value="@estacion.id">@estacion.nombre</option>
+    }
+    </select>
   <label for="Destino" class="form-label">Digite el Destino de la Ruta:</label>
-  <input type="number" class="form-control" id="Destino" name="Destino" placeholder="Destino">
+  <select asp-for="Ruta.destino" class="form-control" required>
+        <option value="">Selecciona el destino</option>
+        @foreach (var estacion in Model.Estaciones)
+    {
+        <option value="@estacion.id">@estacion.nombre</option>
+    }
+    </select>
   <label for="Tiempo Estimado" class="form-label">Digite el Tiempo Estimado de la Ruta:</label>
-  <input type="number" class="form-control" id="Tiempo Estimado" name="Tiempo Estimado" placeholder="Tiempo Estimado">
+  <input type="number" class="form-control" id="Tiempo Estimado" asp-for="Ruta.tiempo_estimado" placeholder="Tiempo Estimado">
   <hr>
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>
