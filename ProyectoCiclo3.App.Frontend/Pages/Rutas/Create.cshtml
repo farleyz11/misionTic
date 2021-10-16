@@ -8,7 +8,7 @@
   @* <label for="ID" class="form-label">Digite el ID de la Ruta:</label>
   <input type="number" class="form-control" id="ID" asp-for="Ruta.ID" placeholder="ID"> *@
   <label for="Origen" class="form-label">Digite el Origen de la Ruta:</label>
-  <select asp-for="Ruta.origen" class="form-control" required>
+  <select name="origen" class="form-control" required>
         <option value="">Selecciona el origen</option>
         @foreach (var estacion in Model.Estaciones)
     {
@@ -16,7 +16,7 @@
     }
     </select>
   <label for="Destino" class="form-label">Digite el Destino de la Ruta:</label>
-  <select asp-for="Ruta.destino" class="form-control" required>
+  <select name="destino" class="form-control" required>
         <option value="">Selecciona el destino</option>
         @foreach (var estacion in Model.Estaciones)
     {
@@ -24,7 +24,7 @@
     }
     </select>
   <label for="Tiempo Estimado" class="form-label">Digite el Tiempo Estimado de la Ruta:</label>
-  <input type="number" class="form-control" id="Tiempo Estimado" asp-for="Ruta.tiempo_estimado" placeholder="Tiempo Estimado">
+  <input type="number" class="form-control" id="Tiempo Estimado" name="tiempo_estimado" placeholder="Tiempo Estimado">
   <hr>
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>

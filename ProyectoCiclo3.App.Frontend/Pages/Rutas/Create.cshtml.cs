@@ -31,13 +31,13 @@ namespace ProyectoCiclo3.App.Frontend.Pages
         }
     
  
-        public IActionResult OnPost()
+        public IActionResult OnPost(int origen, int destino, int tiempo_estimado)
         {
             if(!ModelState.IsValid)
             {
                 return Page();
             }            
-            Ruta = repositorioRutas.Create(Ruta);            
+            Ruta = repositorioRutas.Create(origen, destino, tiempo_estimado);            
             return RedirectToPage("./List");
         }
         
